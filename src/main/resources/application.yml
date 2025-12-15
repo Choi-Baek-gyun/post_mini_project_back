@@ -1,10 +1,15 @@
 spring:
   profiles:
-    active:
+    active: local
     group:
-      local: local-server, common, secret
+      local: common, secret
 
 ---
+
+spring:
+  config:
+    activate:
+      on-profile: common
 
 springdoc:
   swagger-ui:
