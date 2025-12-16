@@ -27,10 +27,9 @@ public class JwtTokenProvider {
         long expiredTime = now.getTime() + (1000l * 60l * 60l * 24l);
         Date expiredDate = new Date(expiredTime);
 
-        // return Jwts.builder().compact(); // JSON 웹 토큰 생성
         return Jwts.builder()
-                .subject("server access token")
-                .issuer("김준일")
+                .subject("Server Access Token")
+                .issuer("code1218")
                 .issuedAt(new Date())
                 .expiration(expiredDate)    // 필수
                 .claim("userId", userEntity.getUserId()) // 필수
